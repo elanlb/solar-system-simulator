@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4864609538215812}
   - component: {fileID: 135241097543270952}
+  - component: {fileID: 114136125741801376}
   m_Layer: 0
   m_Name: Saturn
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1376813905563948}
   m_Mesh: {fileID: 4300000, guid: b9a0be25d00b0924eb34f3aa701cd4df, type: 3}
+--- !u!114 &114136125741801376
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1994742794942982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4673a1c34cee4f93dc801016083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0.7
 --- !u!135 &135241097543270952
 SphereCollider:
   m_ObjectHideFlags: 1
