@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4515427307957540}
   - component: {fileID: 135333983967478698}
+  - component: {fileID: 114423340540388446}
   m_Layer: 0
   m_Name: Mars
   m_TagString: Untagged
@@ -222,6 +223,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355849693152422}
   m_Mesh: {fileID: 4300000, guid: 4b518149a913f7f4a973c5410aeadd8b, type: 3}
+--- !u!114 &114423340540388446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1452835771185732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4673a1c34cee4f93dc801016083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0.12
 --- !u!135 &135333983967478698
 SphereCollider:
   m_ObjectHideFlags: 1

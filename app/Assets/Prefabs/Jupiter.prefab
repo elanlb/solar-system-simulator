@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4189852121098330}
   - component: {fileID: 135038421109457134}
+  - component: {fileID: 114552069882223292}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -118,6 +119,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1098122176080618}
   m_Mesh: {fileID: 4300000, guid: 7f7b469433ab6354ca4f8fb799f263c5, type: 3}
+--- !u!114 &114552069882223292
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1008038408911404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4673a1c34cee4f93dc801016083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 1
 --- !u!135 &135038421109457134
 SphereCollider:
   m_ObjectHideFlags: 1

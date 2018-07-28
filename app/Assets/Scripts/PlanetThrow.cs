@@ -63,6 +63,7 @@ public class PlanetThrow : MonoBehaviour {
 
 			rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
 			rigidbody.useGravity = false;
+			rigidbody.mass = go.GetComponent<Planet>().mass;
 
 			go.AddComponent<OrbitalMotion>();
 		}

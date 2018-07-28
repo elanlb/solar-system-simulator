@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4269403421583832}
   - component: {fileID: 135793620516526024}
+  - component: {fileID: 114455043388061110}
   m_Layer: 0
   m_Name: Mercury
   m_TagString: Untagged
@@ -114,6 +115,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1019032987845268}
   m_Mesh: {fileID: 4300000, guid: 06cbe61ce29844943b40c995d0124033, type: 3}
+--- !u!114 &114455043388061110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1141467319201492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4673a1c34cee4f93dc801016083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0.1
 --- !u!135 &135793620516526024
 SphereCollider:
   m_ObjectHideFlags: 1
