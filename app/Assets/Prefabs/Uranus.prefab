@@ -9,74 +9,74 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1539546567814132}
+  m_RootGameObject: {fileID: 1052817007168526}
   m_IsPrefabAsset: 1
---- !u!1 &1539546567814132
+--- !u!1 &1052817007168526
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4929800701888326}
-  - component: {fileID: 135904716726025948}
+  - component: {fileID: 4637974509478802}
+  - component: {fileID: 135926767530057340}
   m_Layer: 0
-  m_Name: Venus
+  m_Name: Uranus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1838624592197684
+--- !u!1 &1278304018173590
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4313297820629700}
-  - component: {fileID: 33976800418931102}
-  - component: {fileID: 23159040240880268}
+  - component: {fileID: 4381859251814136}
+  - component: {fileID: 33734036999338436}
+  - component: {fileID: 23860296442508212}
   m_Layer: 0
-  m_Name: Venus
+  m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4313297820629700
+--- !u!4 &4381859251814136
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1838624592197684}
+  m_GameObject: {fileID: 1278304018173590}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.3, z: 0}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4929800701888326}
+  m_Father: {fileID: 4637974509478802}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4929800701888326
+--- !u!4 &4637974509478802
 Transform:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539546567814132}
+  m_GameObject: {fileID: 1052817007168526}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: -0, y: 0, z: -16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4313297820629700}
+  - {fileID: 4381859251814136}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23159040240880268
+--- !u!23 &23860296442508212
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1838624592197684}
+  m_GameObject: {fileID: 1278304018173590}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -86,7 +86,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 7740758550627e641987c5fdf753c9d2, type: 2}
+  - {fileID: 2100000, guid: 0105be09a3bce294fb73425026a151fc, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,22 +106,22 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33976800418931102
+--- !u!33 &33734036999338436
 MeshFilter:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1838624592197684}
-  m_Mesh: {fileID: 4300000, guid: 7ca43068a03abb749aa3c0fa38dbf3f7, type: 3}
---- !u!135 &135904716726025948
+  m_GameObject: {fileID: 1278304018173590}
+  m_Mesh: {fileID: 4300000, guid: 0105be09a3bce294fb73425026a151fc, type: 3}
+--- !u!135 &135926767530057340
 SphereCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1539546567814132}
+  m_GameObject: {fileID: 1052817007168526}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
