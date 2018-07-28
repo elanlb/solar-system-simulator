@@ -36,6 +36,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4608863476821258}
+  - component: {fileID: 135928852194399598}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -63,7 +64,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1450612537811892}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: -16}
+  m_LocalPosition: {x: -0, y: 0, z: -18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4119393833150462}
@@ -112,3 +113,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1007467491654478}
   m_Mesh: {fileID: 4300000, guid: b049c863ee7611347b96627098ec98ff, type: 3}
+--- !u!135 &135928852194399598
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1450612537811892}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
