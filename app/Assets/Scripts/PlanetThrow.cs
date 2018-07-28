@@ -6,12 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(SteamVR_TrackedObject))]
 public class PlanetThrow : MonoBehaviour {
 
-	public GameObject prefab;
+	public GameObject[] planets;
 	public Rigidbody attachPoint;
 	
 
 	SteamVR_TrackedObject trackedObj;
 	FixedJoint joint;
+
+	private int index = 0;
 
 	void Awake()
 	{
@@ -25,7 +27,8 @@ public class PlanetThrow : MonoBehaviour {
 		{
 			// spawn new object at controller
 
-			var go = GameObject.Instantiate(prefab);
+			var go = GameObject.Instantiate(planets[index]);
+			index = (index +1)%planets.Length;
 			go.transform.position = attachPoint.transform.position;
 
 			joint = go.AddComponent<FixedJoint>();
@@ -39,7 +42,6 @@ public class PlanetThrow : MonoBehaviour {
 			var rigidbody = go.GetComponent<Rigidbody>();
 			Object.DestroyImmediate(joint);
 			joint = null;
-			//Object.Destroy(go, 15.0f);
 
 			// We should probably apply the offset between trackedObj.transform.position
 			// and device.transform.pos to insert into the physics sim at the correct
@@ -60,6 +62,8 @@ public class PlanetThrow : MonoBehaviour {
 
 			rigidbody.maxAngularVelocity = rigidbody.angularVelocity.magnitude;
 			rigidbody.useGravity = false;
+
+			go.AddComponent<OrbitalMotion>();
 		}
 	}
 }
