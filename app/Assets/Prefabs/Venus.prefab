@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4929800701888326}
   - component: {fileID: 135904716726025948}
+  - component: {fileID: 114800624019727404}
   m_Layer: 0
   m_Name: Venus
   m_TagString: Untagged
@@ -113,6 +114,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1838624592197684}
   m_Mesh: {fileID: 4300000, guid: 7ca43068a03abb749aa3c0fa38dbf3f7, type: 3}
+--- !u!114 &114800624019727404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1539546567814132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97e4673a1c34cee4f93dc801016083f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mass: 0.3
 --- !u!135 &135904716726025948
 SphereCollider:
   m_ObjectHideFlags: 1
