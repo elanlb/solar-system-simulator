@@ -30,6 +30,7 @@ public class PlanetThrow : MonoBehaviour {
 			var go = GameObject.Instantiate(planets[index]);
 			index = (index +1)%planets.Length;
 			go.transform.position = attachPoint.transform.position;
+			go.transform.localScale = new Vector3(.6f,.6f,.6f);
 
 			joint = go.AddComponent<FixedJoint>();
 			joint.connectedBody = attachPoint;

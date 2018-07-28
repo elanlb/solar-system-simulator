@@ -15,6 +15,11 @@ public class OrbitalMotion : MonoBehaviour {
     void FixedUpdate()
     {
 		force = goal - transform.position;
-        rb.AddForce(force.normalized);
+        rb.AddForce(force.normalized * 3 * getGravityAmplitude(force));
     }
+
+	float getGravityAmplitude(Vector3 force){
+		float magnitude = force.magnitude;
+		return 1/(magnitude*magnitude);
+	}
 }
