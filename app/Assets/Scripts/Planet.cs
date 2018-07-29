@@ -4,4 +4,10 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour {
 	public float mass = 1;
+
+	void FixedUpdate () {
+		if (Vector3.Distance(gameObject.transform.position, GameObject.Find("Sun").transform.position) > 100) {
+			Destroy(gameObject);
+		}
+	}
 }
