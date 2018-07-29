@@ -3,7 +3,10 @@
 
 Solar System Simulator is a project created for the XR EDU Challenge. The goal of the project is to (win and) get people interested in the solar system, space, gravity, and other topics related to astrophysics. It is built with SteamVR and Unity and was developed on Windows Mixed Reality.
 
+[![IMAGE ALT TEXT](http://img.youtube.com/vi/EUNAJjNMG4E/0.jpg)](http://www.youtube.com/watch?v=EUNAJjNMG4E "Solar System Simulator")
+
 # Features
+
 ### v0.1
 - Outer space background
 - Low poly models
@@ -12,7 +15,7 @@ Solar System Simulator is a project created for the XR EDU Challenge. The goal o
 - Planet trails
 - Sun has gravitational pull
 - Launch velocity displayed
-### v0.2
+### v1.0
 - Instructions panel
 - Planet size based on mass
 - Planets destroy when out of range
