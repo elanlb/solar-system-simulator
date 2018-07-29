@@ -67,6 +67,8 @@ public class PlanetThrow : MonoBehaviour {
 			rigidbody.useGravity = false;
 			rigidbody.mass = go.GetComponent<Planet>().mass;
 
+			go.GetComponent<TrailRenderer>().enabled = true;
+
 			go.AddComponent<OrbitalMotion>();
 
 			// get and show the velocity of the new object
