@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.5
+  displayName: Uranus
 --- !u!135 &135926767530057340
 SphereCollider:
   m_ObjectHideFlags: 1

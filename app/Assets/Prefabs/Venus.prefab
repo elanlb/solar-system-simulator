@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.3
+  displayName: Venus
 --- !u!135 &135904716726025948
 SphereCollider:
   m_ObjectHideFlags: 1

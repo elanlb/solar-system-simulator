@@ -233,6 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 1
+  displayName: Jupiter
 --- !u!135 &135038421109457134
 SphereCollider:
   m_ObjectHideFlags: 1

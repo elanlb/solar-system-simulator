@@ -4,4 +4,5 @@ using UnityEngine;
 
 public class Planet : MonoBehaviour {
 	public float mass = 1;
+	public string displayName;
 }
