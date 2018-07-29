@@ -9,6 +9,7 @@ public class InstructionPanel : MonoBehaviour {
     public AudioSource audioSource;
 
 	private bool active = false;
+	private float closeTime = -1000;
 
 	// Use this for initialization
 	void Start () {
@@ -22,7 +23,7 @@ public class InstructionPanel : MonoBehaviour {
 		var c2p = panelP - Camera.main.transform.position;
 		var dot = Vector3.Dot(c2p.normalized, Camera.main.transform.forward);
 		
-		if (!active && dot > .5f){
+		if (!active && (Time.time - closeTime > 2) && dot > .5f){
 			// activate panel
 			active = true;
 			animManager.startAppear();
@@ -32,6 +33,7 @@ public class InstructionPanel : MonoBehaviour {
 		else if (active && dot < .5f){
 			active = false;
 			animManager.startDisappear();
+			closeTime = Time.time;
 		}
 		
 	}
