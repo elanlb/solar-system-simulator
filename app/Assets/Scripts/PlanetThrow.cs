@@ -1,13 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 
 [RequireComponent(typeof(SteamVR_TrackedObject))]
 public class PlanetThrow : MonoBehaviour {
 
 	public GameObject[] planets;
 	public Rigidbody attachPoint;
+
+	public GameObject VelocityText; // will be instantiated and modified to display speed
 	
 
 	SteamVR_TrackedObject trackedObj;
@@ -37,7 +39,7 @@ public class PlanetThrow : MonoBehaviour {
 		}
 		else if (joint != null && device.GetTouchUp(SteamVR_Controller.ButtonMask.Trigger))
 		{
-			// release object & throw
+			// release object & throw (called once per throw)
 
 			var go = joint.gameObject;
 			var rigidbody = go.GetComponent<Rigidbody>();
@@ -66,6 +68,23 @@ public class PlanetThrow : MonoBehaviour {
 			rigidbody.mass = go.GetComponent<Planet>().mass;
 
 			go.AddComponent<OrbitalMotion>();
+
+			// get and show the velocity of the new object
+			float velocity = rigidbody.velocity.magnitude;
+			GameObject velocityText = Instantiate(VelocityText);
+			velocityText.transform.position = transform.position;
+			/*velocityText.transform.eulerAngles = new Vector3(
+				transform.eulerAngles.x + 30,
+				transform.eulerAngles.y,
+				transform.eulerAngles.z
+			);*/
+			velocityText.transform.LookAt(Camera.main.transform); // look at the player
+			velocityText.transform.eulerAngles += new Vector3(0, 180, 0);
+
+			velocityText.GetComponent<TextMeshPro>().text = "Velocity:\n" + velocity.ToString("0.00");
+
+			// destroy after a certain amount of time
+			GameObject.Destroy(velocityText, 2.0f);
 		}
 	}
 }
