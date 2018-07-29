@@ -30,10 +30,10 @@ public class PlanetThrow : MonoBehaviour {
 			// spawn new object at controller
 
 			var go = GameObject.Instantiate(planets[index]);
+
 			index = (index +1)%planets.Length;
 			go.transform.position = attachPoint.transform.position;
-			go.transform.localScale = new Vector3(.6f,.6f,.6f);
-
+			
 			joint = go.AddComponent<FixedJoint>();
 			joint.connectedBody = attachPoint;
 		}
@@ -75,11 +75,7 @@ public class PlanetThrow : MonoBehaviour {
 			float velocity = rigidbody.velocity.magnitude;
 			GameObject velocityText = Instantiate(VelocityText);
 			velocityText.transform.position = transform.position;
-			/*velocityText.transform.eulerAngles = new Vector3(
-				transform.eulerAngles.x + 30,
-				transform.eulerAngles.y,
-				transform.eulerAngles.z
-			);*/
+
 			velocityText.transform.LookAt(Camera.main.transform); // look at the player
 			velocityText.transform.eulerAngles += new Vector3(0, 180, 0);
 
