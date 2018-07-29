@@ -10,12 +10,14 @@ public class PlanetThrow : MonoBehaviour {
 	public Rigidbody attachPoint;
 
 	public GameObject VelocityText; // will be instantiated and modified to display speed
+	public GameObject PlanetText;
 	
 
 	SteamVR_TrackedObject trackedObj;
 	FixedJoint joint;
 
 	private int index = 0;
+	private float planetChangeTimer = 0;
 
 	void Awake()
 	{
@@ -31,7 +33,6 @@ public class PlanetThrow : MonoBehaviour {
 
 			var go = GameObject.Instantiate(planets[index]);
 
-			index = (index +1)%planets.Length;
 			go.transform.position = attachPoint.transform.position;
 			
 			joint = go.AddComponent<FixedJoint>();
@@ -83,6 +84,28 @@ public class PlanetThrow : MonoBehaviour {
 
 			// destroy after a certain amount of time
 			GameObject.Destroy(velocityText, 2.0f);
+		}
+
+		// switch planets
+		planetChangeTimer += Time.deltaTime;
+
+		if (planetChangeTimer > 0.3f) {
+			if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < -0.5f) {
+				index = (index + 1) % planets.Length;
+				PlanetText.GetComponent<TextMeshPro>().text = planets[index].name;
+
+				planetChangeTimer = 0;
+
+			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
+				index = index - 1;
+				if (index < 0) {
+					index = planets.Length;
+				}
+
+				PlanetText.GetComponent<TextMeshPro>().text = planets[index].name;
+
+				planetChangeTimer = 0;
+			}
 		}
 	}
 }
