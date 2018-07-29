@@ -89,14 +89,14 @@ public class PlanetThrow : MonoBehaviour {
 		// switch planets
 		planetChangeTimer += Time.deltaTime;
 
-		if (planetChangeTimer > 0.1f) {
-			if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < 0.5f) {
+		if (planetChangeTimer > 0.3f) {
+			if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < -0.5f) {
 				index = (index + 1) % planets.Length;
 				PlanetText.GetComponent<TextMeshPro>().text = planets[index].name;
 
 				planetChangeTimer = 0;
 
-			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > -0.5f) {
+			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
 				index = index - 1;
 				if (index < 0) {
 					index = planets.Length;
