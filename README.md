@@ -36,13 +36,23 @@ The goal of Solar System Simulator is to set the planets into orbit by controlli
 
 # Attributions
 "[Sun](https://poly.google.com/view/77wHkzwlpOq)" by [Poly by Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Mercury](https://poly.google.com/view/9PBDNYhgXDS)" by [Jarlan Perez](https://poly.google.com/user/4lZfAdz3x3X) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Venus](https://poly.google.com/view/6V99ow0chMd)" by [Poly by Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Earth](https://poly.google.com/view/88CP80Kgb-u)" by [Poly by Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Mars](https://poly.google.com/view/dsrYdi4GZ8U)" by [Poly by Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Curiosity Rover](https://poly.google.com/view/caZFn1bu4Zc)" by [Keen Chan](https://poly.google.com/user/9ONx-uk_7ao) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Asteroid](https://poly.google.com/view/enaIlQWET9a)" by [Poly by Google](https://poly.google.com/user/4aEd8rQgKu2) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Jupiter](https://poly.google.com/view/6jv2Cl_xK2i)" by [Jarlan Perez](https://poly.google.com/user/4lZfAdz3x3X) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Saturn](https://poly.google.com/view/b-y9HDTsu7q)" by [Jarlan Perez](https://poly.google.com/user/4lZfAdz3x3X) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Uranus](https://poly.google.com/view/7qZDvQcXQWN)" by [Jarlan Perez](https://poly.google.com/user/4lZfAdz3x3X) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
+
 "[Neptune](https://poly.google.com/view/38LOedsa9ES)" by [Jarlan Perez](https://poly.google.com/user/4lZfAdz3x3X) is licensed under [CC-BY](https://creativecommons.org/licenses/by/4.0)
