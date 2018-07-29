@@ -22,4 +22,21 @@ public class OrbitalMotion : MonoBehaviour {
 		float magnitude = force.magnitude;
 		return 1/(magnitude*magnitude);
 	}
+
+	void OnCollisionEnter(Collision collision){
+		print(collision.collider.gameObject.name);
+		if (collision.collider.gameObject.name.Equals("Sun")){
+			// sun collision
+			// explode
+			GameObject.Destroy(gameObject, .5f);
+
+			var explosion = GameObject.Instantiate(GameObject.Find("Explosion"));
+
+			explosion.transform.position = transform.position;
+			for (int i = 0; i < transform.childCount; i++){
+				explosion.transform.GetChild(i).gameObject.SetActive(true);
+			}
+
+		}
+	}
 }
