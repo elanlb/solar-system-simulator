@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.3
+  displayName: Earth
 --- !u!135 &135891437086607380
 SphereCollider:
   m_ObjectHideFlags: 1

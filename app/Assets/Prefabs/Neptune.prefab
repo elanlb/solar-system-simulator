@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.6
+  displayName: Neptune
 --- !u!135 &135928852194399598
 SphereCollider:
   m_ObjectHideFlags: 1

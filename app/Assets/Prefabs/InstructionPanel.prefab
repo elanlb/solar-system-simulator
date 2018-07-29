@@ -741,8 +741,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Instructions:\n\n\u2022Hold trigger to create planet\n\u2022Fling and release\n\n\n\n\nTry
-    to achieve a stable orbit"
+  m_Text: "Instructions:\n\n\u2022 Push thumbstick up/down to \n   select planet\n\u2022
+    Hold trigger to create planet\n\u2022 Fling and release\n\n\n\nTry to achieve
+    a stable orbit"
 --- !u!114 &114381740780148052
 MonoBehaviour:
   m_ObjectHideFlags: 1

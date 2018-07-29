@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 [RequireComponent(typeof(SteamVR_TrackedObject))]
@@ -10,7 +11,7 @@ public class PlanetThrow : MonoBehaviour {
 	public Rigidbody attachPoint;
 
 	public GameObject VelocityText; // will be instantiated and modified to display speed
-	public GameObject PlanetText;
+	public Text PlanetText;
 	
 
 	SteamVR_TrackedObject trackedObj;
@@ -91,18 +92,19 @@ public class PlanetThrow : MonoBehaviour {
 
 		if (planetChangeTimer > 0.3f) {
 			if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < -0.5f) {
-				index = (index + 1) % planets.Length;
-				PlanetText.GetComponent<TextMeshPro>().text = planets[index].name;
-
-				planetChangeTimer = 0;
-
-			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
 				index = index - 1;
 				if (index < 0) {
 					index = planets.Length;
 				}
+				
+				PlanetText.text = planets[index].name;
 
-				PlanetText.GetComponent<TextMeshPro>().text = planets[index].name;
+				planetChangeTimer = 0;
+
+			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
+				index = (index + 1) % planets.Length;
+
+				PlanetText.text = planets[index].name;
 
 				planetChangeTimer = 0;
 			}

@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 0.12
+  displayName: Mars
 --- !u!135 &135333983967478698
 SphereCollider:
   m_ObjectHideFlags: 1
