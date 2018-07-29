@@ -161,21 +161,21 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.16345978
-        inSlope: -0.12601024
-        outSlope: -0.12601024
+        value: 0.047050476
+        inSlope: -0.037244897
+        outSlope: -0.037244897
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.31275725
+        outWeight: 0.129925
       - serializedVersion: 3
         time: 0.9759034
         value: 0.009615377
-        inSlope: -0.21002047
-        outSlope: -0.21002047
+        inSlope: -0.12585858
+        outSlope: -0.12585858
         tangentMode: 0
         weightedMode: 0
-        inWeight: 0.23456775
+        inWeight: 0.13710187
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -239,5 +239,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.035
   m_Center: {x: 0, y: 0, z: 0}
