@@ -28,7 +28,13 @@ public class PlanetThrow : MonoBehaviour {
 	void FixedUpdate()
 	{
 		var device = SteamVR_Controller.Input((int)trackedObj.index);
-		if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
+        if (device.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
+        {
+            Vector2 touch = (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis0));
+            if (touch.y >= 0.5f) nextPlanet();
+            else if (touch.y <= -0.5f) previousPlanet();
+        }
+        if (joint == null && device.GetTouchDown(SteamVR_Controller.ButtonMask.Trigger))
 		{
 			// spawn new object at controller
 
@@ -90,24 +96,37 @@ public class PlanetThrow : MonoBehaviour {
 		// switch planets
 		planetChangeTimer += Time.deltaTime;
 
-		if (planetChangeTimer > 0.3f) {
-			if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < -0.5f) {
-				index = index - 1;
-				if (index < 0) {
-					index = planets.Length;
-				}
-				
-				PlanetText.text = planets[index].name;
-
-				planetChangeTimer = 0;
-
-			} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
-				index = (index + 1) % planets.Length;
-
-				PlanetText.text = planets[index].name;
-
-				planetChangeTimer = 0;
-			}
+        if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y < -0.5f) {
+            previousPlanet();
+		} else if (device.GetAxis(Valve.VR.EVRButtonId.k_EButton_Axis2).y > 0.5f) {
+            nextPlanet();
 		}
+		
 	}
+
+    void previousPlanet()
+    {
+        if (planetChangeTimer <= 0.3f) return;
+
+        index = index - 1;
+        if (index < 0)
+        {
+            index = planets.Length;
+        }
+
+        PlanetText.text = planets[index].name;
+
+        planetChangeTimer = 0;
+    }
+
+    void nextPlanet()
+    {
+        if (planetChangeTimer <= 0.3f) return;
+
+        index = (index + 1) % planets.Length;
+
+        PlanetText.text = planets[index].name;
+
+        planetChangeTimer = 0;
+    }
 }
