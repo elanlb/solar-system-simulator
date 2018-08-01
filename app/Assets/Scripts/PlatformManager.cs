@@ -3,22 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LayoutManager : MonoBehaviour {
+public class PlatformManager : MonoBehaviour {
 
     public List<LayoutGroup> layoutGroups;
     public List<PlatformSpecificText> platformSpecificTexts;
 
-    enum Headset
+    public enum Headset
     {
         VIVE,
-        WMR
+        WMR, 
+        RIFT
     }
 
-    Headset headset;
+    public static Headset headset;
 
     // Use this for initialization
     void Start() {
-        headset = SteamVR.instance.GetStringProperty(Valve.VR.ETrackedDeviceProperty.Prop_ManufacturerName_String).ToLower().Contains("htc") ? Headset.VIVE : Headset.WMR;
+        string manufacturer = SteamVR.instance.GetStringProperty(Valve.VR.ETrackedDeviceProperty.Prop_ManufacturerName_String).ToLower();
+
+        if (manufacturer.Contains("oculus")) headset = Headset.RIFT;
+        else if (manufacturer.Contains("htc")) headset = Headset.VIVE;
+        else headset = Headset.WMR;
 
         foreach (LayoutGroup lg in layoutGroups)
         {
@@ -37,8 +42,14 @@ public class LayoutManager : MonoBehaviour {
         {
             case Headset.WMR:
                 Destroy(pst.viveText.gameObject);
+                Destroy(pst.riftText.gameObject);
                 break;
             case Headset.VIVE:
+                Destroy(pst.wmrText.gameObject);
+                Destroy(pst.riftText.gameObject);
+                break;
+            case Headset.RIFT:
+                Destroy(pst.viveText.gameObject);
                 Destroy(pst.wmrText.gameObject);
                 break;
         }
@@ -56,6 +67,10 @@ public class LayoutManager : MonoBehaviour {
                 lg.obj.transform.localPosition = lg.vive.position;
                 lg.obj.transform.localEulerAngles = lg.vive.rotation;
                 break;
+            case Headset.RIFT:
+                lg.obj.transform.localPosition = lg.rift.position;
+                lg.obj.transform.localEulerAngles = lg.rift.rotation;
+                break;
         }
     }
 
@@ -65,6 +80,7 @@ public class LayoutManager : MonoBehaviour {
         public GameObject obj;
         public Layout vive;
         public Layout wmr;
+        public Layout rift;
     }
 
     [System.Serializable]
@@ -78,5 +94,6 @@ public class LayoutManager : MonoBehaviour {
     {
         public Text viveText;
         public Text wmrText;
+        public Text riftText;
     }
 }
