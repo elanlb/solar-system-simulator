@@ -40,6 +40,8 @@ public class OrbitalMotion : MonoBehaviour {
 
 		explosion.transform.position = transform.position;
 
+        Destroy(explosion, 5);
+
 		// enable surface layer
 		var surfaceLayer = explosion.transform.GetChild(1);
 		var dia = GetComponent<SphereCollider>().radius *2;
